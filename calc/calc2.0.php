@@ -10,11 +10,9 @@
 
 <?php
 
-// javlja error tako da sam ubacio ovo
-
 error_reporting(0);
 $total1 = $_GET["number1"];
-$total2 = $_GET["number2"];
+$total2 = $_GET["number2"]+ 0;
 $result = null;
 
 if(is_numeric($total1) and is_numeric($total2)){
@@ -40,7 +38,7 @@ if(isset($_GET["multiply"])){
 // dijeljenje
 
 if(isset($_GET["divide"])){
-    if ($total2 == 0) {
+    if ($total2 === 0) {
 
 // mby promjeniti na kraju
 
@@ -60,8 +58,8 @@ $result = "Please enter a number in both slots";
   <!-- HTML test -->
 <form>
 
-    <input type="text" name="number1" placeholder="First Number">
-    <input type="text" name="number2" placeholder="Second Number">
+    <input type="number" name="number1" placeholder="First Number">
+    <input type="number" name="number2" placeholder="Second Number">
     <br>
     <button type="submit" name="add" value="add" > + </button>
     <button type="submit" name="subtract" value="subtract"> - </button>
