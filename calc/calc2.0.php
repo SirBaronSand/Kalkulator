@@ -15,7 +15,6 @@ $total1 = $_GET["number1"];
 $total2 = $_GET["number2"]+ 0;
 $result = null;
 
-if(is_numeric($total1) and is_numeric($total2)){
 
 // zbrajanje
 
@@ -47,9 +46,6 @@ if(isset($_GET["divide"])){
     } else {
     $result = $total1 . "/" . $total2 . "=" . ($total1 / $total2);
     }
-}
-} else{
-$result = "Please enter a number in both slots";
 }
 
 
